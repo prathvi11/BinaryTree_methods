@@ -13,4 +13,11 @@ class BinaryTree:
         self.customList[self.lastUsedIndex+1] = value
         self.lastUsedIndex += 1
         return "The value has been inserted"
+
+#Searching a node
+    def searchNode(self, noddeValue):
+        for i in range(len(self.customList)):
+            if self.customList[i] == noddeValue:
+                return "success"
+        return "NOT found"
     
