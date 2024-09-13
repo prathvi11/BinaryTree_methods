@@ -20,4 +20,13 @@ class BinaryTree:
             if self.customList[i] == noddeValue:
                 return "success"
         return "NOT found"
-    
+
+#PreorderTraversal 
+    def preOrderTraversal(self, index):
+        if index > self.lastUsedIndex:
+            return
+        print(self.customList[index])
+        self.preOrderTraversal(index*2)
+        self.preOrderTraversal(index*2 + 1)
+        
+
