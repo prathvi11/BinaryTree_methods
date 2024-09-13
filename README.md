@@ -36,5 +36,12 @@ class BinaryTree:
         self.inOrderTraversal(index*2)
         print(self.customList[index])
         self.inOrderTraversal(index*2+1)   
-        
+
+#postordertraversal
+    def postOrdertraversal(self, index):
+        if index > self.lastUsedIndex:
+            return
+        self.postOrdertraversal(index*2)
+        self.postOrdertraversal(index*2+1)
+        print(self.customList[index])
 
